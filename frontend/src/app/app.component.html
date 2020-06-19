@@ -1,0 +1,18 @@
+<nav>
+    <section>
+        <ul>
+            <li [routerLink]="['/']">MusicBase</li>
+            <li [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</li>
+        </ul>
+    </section>
+    <section>
+        <button class="primary" [routerLink]="['register']" [routerLinkActive]="['active']" *ngIf="!loggedIn">Register</button>
+        <button class="link" [routerLink]="['login']" [routerLinkActive]="['active']" *ngIf="!loggedIn">Login</button>
+        <button class="" [routerLink]="['profile']" [routerLinkActive]="['active']" *ngIf="loggedIn">Profile</button>
+        <button class="tomato" (click)="logout()" *ngIf="loggedIn">Logout</button>
+    </section>
+</nav>
+
+<main>
+    <router-outlet></router-outlet>
+</main>

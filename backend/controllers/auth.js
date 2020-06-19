@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
                 username: req.body.username,
                 password: bcrypt.hashSync(req.body.password, 10)
             }).then(user => {
-                Session.addUser(user.username)
+                // Session.addUser(user.username)
                 res.status(201).json({
                     message: "Utworzono użytkownika, id: " + user.id
                 });

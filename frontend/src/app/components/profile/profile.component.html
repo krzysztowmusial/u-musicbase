@@ -1,0 +1,12 @@
+<h1>Welcome {{ getToken() }}, your favourites: </h1>
+
+<mat-card *ngFor="let fav of favs" class="item">
+    <div class="title">
+        {{ fav?.name }}
+    </div>
+    <div>
+        <button class="tomato" (click)="removeFromFavourites(fav.id)">
+            Delete
+        </button>
+    </div>
+</mat-card>

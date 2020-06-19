@@ -1,0 +1,26 @@
+<div class="welcome" *ngIf="!loggedIn"></div>
+
+<mat-form-field class="genre">
+    <mat-label>Select genre</mat-label>
+    <mat-select>
+      <mat-option (click)="changeGenre('all')">-</mat-option>
+      <mat-option *ngFor="let genre of genres" (click)="changeGenre(genre)" [value]="genre">{{ genre }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<main>
+    <mat-card class="card" *ngFor="let album of albums">
+        <mat-card-header>
+            <mat-card-title>{{ album?.name }}</mat-card-title>
+            <mat-card-subtitle>{{ album?.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ album?.cover }}">
+        <mat-card-content>
+            <p>Date: {{ album?.date }}</p>
+            <p>Genre: {{ album?.genre }}</p>
+          </mat-card-content>
+        <mat-card-actions *ngIf="loggedIn">
+            <button mat-stroked-button color="accent" (click)="addToFavourites(album?.id)">Lubię to!</button>
+          </mat-card-actions>
+    </mat-card>
+</main>

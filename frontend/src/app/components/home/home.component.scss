@@ -1,0 +1,25 @@
+.welcome {
+    height: 300px;
+    width: calc(100% + 4em);
+    background: rgb(31, 31, 31);
+    margin: -2em;
+    margin-bottom: 2em;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        width: 300px;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &:nth-child(1) {
+            // margin-left: 0;
+        }
+    }
+}

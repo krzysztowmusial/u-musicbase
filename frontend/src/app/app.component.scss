@@ -1,0 +1,48 @@
+nav {
+    padding: 1em 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgb(31, 31, 31);
+    color: white;
+
+    section {
+        &:nth-child(1) {
+            display: flex;
+            align-items: center;
+            ul {
+                list-style: none;
+                display: flex;
+
+                li {
+                    margin-right: 1em;
+                    cursor: pointer;
+
+                    &.active {
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                margin-left: 1em;
+                opacity: .8;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+            button:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+main {
+    padding: 2em;
+}
