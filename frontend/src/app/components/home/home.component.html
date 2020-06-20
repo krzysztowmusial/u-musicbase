@@ -1,4 +1,13 @@
-<div class="welcome" *ngIf="!loggedIn"></div>
+<div class="landing"  *ngIf="!loggedIn">
+    <div class="welcome">
+        <div></div>
+        <div>
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sunt, error mollitia dolorum officia eaque vero vel inventore dolor corrupti quaerat ad aspernatur quia fuga voluptate ex saepe non similique?</p>
+            <button class="primary" [routerLink]="['register']" [routerLinkActive]="['active']">Register</button>
+        </div>
+    </div>
+</div>
 
 <mat-form-field class="genre">
     <mat-label>Select genre</mat-label>
@@ -24,3 +33,4 @@
           </mat-card-actions>
     </mat-card>
 </main>
+<!-- <button (click)="soap()">SOAP</button> -->

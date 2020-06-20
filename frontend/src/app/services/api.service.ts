@@ -35,8 +35,15 @@ export class ApiService {
         })
     }
 
-    public changeGenre (category: string) {
+    public changeGenre(category: string) {
         this.genreSubject.next(category)
+    }
+
+    //soap
+    public getSoap() {
+        return this.http.get('http://localhost:3030/bmicalculator?wsdl', { responseType: 'text' }).subscribe((data)=>{
+            console.log(data)
+        });
     }
 
 }

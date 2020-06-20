@@ -1,9 +1,43 @@
-.welcome {
-    height: 300px;
+.landing {
+    height: 500px;
     width: calc(100% + 4em);
     background: rgb(31, 31, 31);
     margin: -2em;
     margin-bottom: 2em;
+}
+
+.welcome {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(2) {
+            padding-left: 2em;
+            align-items: flex-start;
+            flex-direction: column;
+
+            p {
+                margin: 1em 0;
+                font-size: 1.8em;
+            }
+        }
+
+        &:nth-child(1) {
+            background: url('../../../assets/music.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+    }
 }
 
 main {
@@ -22,4 +56,8 @@ main {
             // margin-left: 0;
         }
     }
+}
+
+.genre {
+    padding: 2em;
 }

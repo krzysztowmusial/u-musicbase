@@ -72,4 +72,9 @@ export class HomeComponent implements OnInit {
         this.api.changeGenre(category)
     }
 
+    soap() {
+        let lol = this.api.getSoap();
+        console.log(lol)
+    }
+
 }
